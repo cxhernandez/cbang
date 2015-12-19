@@ -218,7 +218,7 @@ void Thread::yield() {
 #elif defined(__APPLE__)
   sched_yield();
 #else
-  pthread_yield();
+  sched_yield(); 
 #endif
 }
 
